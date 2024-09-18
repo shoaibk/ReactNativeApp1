@@ -13,20 +13,22 @@ export default function AboutPage({ navigation }) {
     <SafeAreaView style={styles.container}>
       <ScrollView>
         <View>
-          <Button
-            title="Home Page"
-            onPress={() => navigation.navigate("Home")}
-          ></Button>
           <Image
-            source={require("../assets/dog.png")}
-            style={{
-              borderColor: "#eee",
-              borderWidth: 5,
-              width: 300,
-              height: 400,
-            }}
+            source={require("../assets/gifer.gif")}
+            style={styles.image}
           />
-          <Text>
+          <View style={styles.buttonGroup}>
+            <Button
+              title="Home Page"
+              onPress={() => navigation.navigate("Home")}
+            ></Button>
+            <Button
+              title="List Page"
+              onPress={() => navigation.navigate("List")}
+            ></Button>
+          </View>
+
+          <Text style={styles.paragraph}>
             Lorem Ipsum: Lorem ipsum dolor sit amet, consectetur adipiscing
             elit, sed do eiusmod tempor incididunt ut labore et dolore magna
             aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
@@ -82,5 +84,22 @@ const styles = StyleSheet.create({
     // alignItems: "center",
     // justifyContent: "center",
     // paddingTop: 48,
+  },
+  image: {
+    width: "100%",
+    height: 400,
+  },
+  paragraph: {
+    display: "inline-block",
+    lineHeight: 24,
+    paddingHorizontal: 16,
+    marginVertical: 16
+  },
+  buttonGroup: {
+    marginTop: 24,
+    width: "100%",
+    display: "flex",
+    flexDirection: "row",
+    justifyContent: "space-around",
   },
 });

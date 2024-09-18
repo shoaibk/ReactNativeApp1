@@ -13,7 +13,9 @@ export default function App() {
     <NavigationContainer>
       <Stack.Navigator initialRouteName="Home">
         <Stack.Screen name="Home" component={HomePage} />
+        {/* About page is Second page */}
         <Stack.Screen name="About" component={AboutPage} />
+        {/* List Page is Third Page */}
         <Stack.Screen name="List" component={ListPage} />
       </Stack.Navigator>
     </NavigationContainer>
